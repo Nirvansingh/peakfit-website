@@ -1,166 +1,925 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PeakFit Studio - Chandigarh's premier boutique fitness collective founded by Dhiti Sharma. Biomechanics, strength conditioning, and tailored nutrition.">
+  
+  <title>PeakFit Studio | High Performance & Strength Collective</title>
 
-<title>PeakFit Gym</title>
+  <!-- Google Fonts: Syne + Instrument Serif + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">PeakFit</div>
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
 
+  <!-- Announcement Bar -->
+  <div class="top-bar">
+    <span>Private Demo Access: 3-Day VIP Studio Pass • Code: <span class="code-tag">DHITI-VIP</span></span>
+    <button class="top-bar-close" aria-label="Close announcement">&times;</button>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <div class="logo-symbol">P</div>
+        Peak<span>Fit</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Ethos</a></li>
+        <li><a href="#programs" class="nav-link">Programs</a></li>
+        <li><a href="#calculator" class="nav-link">Health Metric</a></li>
+        <li><a href="#schedule" class="nav-link">Timetable</a></li>
+        <li><a href="#coaches" class="nav-link">Coaches</a></li>
+        <li><a href="#pricing" class="nav-link">Memberships</a></li>
+        <li><a href="#stories" class="nav-link">Case Studies</a></li>
+        <li><a href="#contact" class="nav-link">Studio</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm open-modal-trigger" data-plan="Claim 3-Day VIP Guest Pass">
+          Guest Pass
+        </button>
+        <button class="mobile-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <div class="logo-symbol">P</div>
+        Peak<span>Fit</span>
+      </div>
+      <button class="close-drawer">&times;</button>
+    </div>
     <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">Ethos</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#calculator">Health Metric</a></li>
+      <li><a href="#schedule">Timetable</a></li>
+      <li><a href="#coaches">Coaches</a></li>
+      <li><a href="#pricing">Memberships</a></li>
+      <li><a href="#stories">Case Studies</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Studio</a></li>
     </ul>
-</nav>
+    <button class="btn btn-primary btn-block open-modal-trigger" data-plan="Claim 3-Day VIP Guest Pass">
+      Claim Guest Pass
+    </button>
+  </div>
 
-<header class="hero">
-    <div class="overlay">
-
-        <h1>Transform Your Fitness Journey</h1>
-
-        <p>
-            Modern equipment, certified trainers,
-            and personalized plans to help you
-            achieve your goals.
+  <!-- Hero Section (Editorial Layout) -->
+  <header id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Chandigarh • Sector 26 Hub</div>
+        <h1 class="hero-title">
+          Strength is a <span class="serif-italic">discipline.</span><br>
+          We make it an art.
+        </h1>
+        <p class="hero-lead">
+          A bespoke performance collective founded by <strong>Master Coach Dhiti Sharma</strong>. Biomechanical strength training, metabolic conditioning, and individualized nutrition designed for individuals who demand tangible results.
         </p>
 
-        <a href="#pricing" class="btn">Join Today</a>
+        <div class="hero-actions">
+          <button class="btn btn-primary open-modal-trigger" data-plan="Book 3-Day VIP Pass with Dhiti">
+            Experience 3-Day Trial
+          </button>
+          <a href="#calculator" class="btn btn-secondary">
+            Calculate Baselines
+          </a>
+        </div>
 
+        <div class="hero-proof">
+          <div class="proof-avatars">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Member Dhanya">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Member Rohan">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Member Simran">
+          </div>
+          <div class="proof-text">
+            <strong>4.9 / 5.0 Member Satisfaction</strong>
+            <span>Based on 1,400+ coached athletes & professionals</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-image-frame">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" alt="PeakFit Studio Interior">
+          <div class="hero-badge-overlay">
+            <div class="hero-badge-item">
+              <span>Primary Discipline</span>
+              <strong>Hypertrophy & Mobility</strong>
+            </div>
+            <div class="hero-badge-item" style="text-align: right;">
+              <span>Location</span>
+              <strong>Chandigarh, India</strong>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<section id="about">
-
-    <h2>About Us</h2>
-
-    <p>
-        PeakFit Gym is dedicated to helping members
-        achieve their fitness goals through expert
-        coaching, modern facilities, and a supportive
-        community.
-    </p>
-
-</section>
-
-<section id="services">
-
-    <h2>Our Services</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Personal Training</h3>
-            <p>Customized workout plans and coaching.</p>
-        </div>
-
-        <div class="card">
-            <h3>Nutrition Guidance</h3>
-            <p>Healthy eating plans for better results.</p>
-        </div>
-
-        <div class="card">
-            <h3>Strength Training</h3>
-            <p>Build muscle and increase performance.</p>
-        </div>
-
-        <div class="card">
-            <h3>Group Classes</h3>
-            <p>High-energy classes led by experts.</p>
-        </div>
-
+  <!-- Editorial Marquee Ticker -->
+  <div class="marquee-strip">
+    <div class="marquee-content">
+      <span>Athletic Hypertrophy</span> <span class="dot">•</span>
+      <span class="highlight">Functional Mobility</span> <span class="dot">•</span>
+      <span>Metabolic Conditioning</span> <span class="dot">•</span>
+      <span class="highlight">Tailored Nutrition Design</span> <span class="dot">•</span>
+      <span>Olympic Lifting</span> <span class="dot">•</span>
+      <span class="highlight">Bespoke 1-on-1 Mentorship</span> <span class="dot">•</span>
+      <span>Athletic Hypertrophy</span> <span class="dot">•</span>
+      <span class="highlight">Functional Mobility</span> <span class="dot">•</span>
+      <span>Metabolic Conditioning</span> <span class="dot">•</span>
+      <span class="highlight">Tailored Nutrition Design</span> <span class="dot">•</span>
     </div>
+  </div>
 
-</section>
-
-<section id="pricing">
-
-    <h2>Membership Plans</h2>
-
-    <div class="pricing">
-
-        <div class="price-card">
-
-            <h3>Basic</h3>
-
-            <h1>₹999</h1>
-
-            <p>Gym Access</p>
-
-        </div>
-
-        <div class="price-card featured">
-
-            <h3>Pro</h3>
-
-            <h1>₹1999</h1>
-
-            <p>Gym + Classes</p>
-
-        </div>
-
-        <div class="price-card">
-
-            <h3>Elite</h3>
-
-            <h1>₹2999</h1>
-
-            <p>Personal Trainer</p>
-
-        </div>
-
+  <!-- Stats Strip -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="15000" data-suffix="+">0</div>
+        <div class="stat-label">Athletes Coached</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="45" data-suffix="+">0</div>
+        <div class="stat-label">Certified Mentors</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="98" data-suffix="%">0</div>
+        <div class="stat-label">Transformation Success</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+        <div class="stat-label">VIP Studio Access</div>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- About / Ethos Section -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=80" alt="PeakFit Studio Gym" class="about-main-img">
+        <div class="about-inset-card">
+          <strong>7+ YRS</strong>
+          <p>Of Science-Led Athletic Excellence</p>
+        </div>
+      </div>
 
-<section>
+      <div class="about-content reveal">
+        <div class="eyebrow">The Studio Ethos</div>
+        <h2 class="section-title">
+          Bridging Biomechanics & <span class="serif-italic">Human Performance</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom: 24px;">
+          Founded on the principle that fitness is not a seasonal trend but a lifelong practice. We merge world-class equipment, precise movement standards, and restorative recovery protocols into a unified training experience.
+        </p>
 
-    <h2>Testimonials</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            ⭐⭐⭐⭐⭐
-            <p>"Lost 12kg in 5 months!"</p>
+        <div class="pillar-grid">
+          <div class="pillar-item">
+            <h4>Precision Biomechanics</h4>
+            <p>Hammer Strength and Eleiko calibrated bars designed to protect joints and maximize force output.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>Individualized Nutrition</h4>
+            <p>Macro-nutrient protocols tailored to energy expenditure, fat loss, and muscle protein synthesis.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>Bespoke Mentorship</h4>
+            <p>Direct coaching from Dhiti Sharma and certified trainers who understand your unique anatomy.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>Restorative Lab</h4>
+            <p>Infrared sauna, contrast therapy, and guided mobility to accelerate central nervous system recovery.</p>
+          </div>
         </div>
 
-        <div class="card">
-            ⭐⭐⭐⭐⭐
-            <p>"Best gym experience ever."</p>
-        </div>
-
+        <button class="btn btn-secondary open-modal-trigger" data-plan="Schedule Private Studio Walkthrough">
+          Schedule Studio Walkthrough
+        </button>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- Programs & Disciplines Section -->
+  <section id="programs">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Curated Disciplines</div>
+        <h2 class="section-title">Performance <span class="serif-italic">Programs</span></h2>
+        <p class="section-subtitle">
+          Engineered for progressive overload, metabolic conditioning, and full-body longevity.
+        </p>
+      </div>
 
-<section id="contact">
+      <div class="discipline-tabs reveal">
+        <button class="tab-btn active" data-filter="all">All Disciplines</button>
+        <button class="tab-btn" data-filter="strength">Strength & Power</button>
+        <button class="tab-btn" data-filter="hiit">Metabolic Burn</button>
+        <button class="tab-btn" data-filter="yoga">Mobility & Yoga</button>
+        <button class="tab-btn" data-filter="combat">Boxing & Combat</button>
+      </div>
 
-    <h2>Contact Us</h2>
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card reveal" data-category="strength">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=700&q=80" alt="Hypertrophy Program">
+            <span class="program-tag">Strength</span>
+          </div>
+          <div class="program-body">
+            <h3>Athletic Hypertrophy</h3>
+            <p>Compound barbell lifts, structural stabilization, and progressive overload to build lean muscle density.</p>
+            <div class="program-meta">
+              <span>60 Mins</span>
+              <span>High Intensity</span>
+              <span>Barbell / Dumbbell</span>
+            </div>
+          </div>
+        </div>
 
-    <p>📞 +91 **********</p>
+        <!-- Program 2 -->
+        <div class="program-card reveal" data-category="hiit">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&w=700&q=80" alt="Metabolic HIIT">
+            <span class="program-tag">HIIT</span>
+          </div>
+          <div class="program-body">
+            <h3>Metabolic Circuit</h3>
+            <p>High-turnover interval training utilizing air bikes, plyometrics, and kettlebells to maximize aerobic threshold.</p>
+            <div class="program-meta">
+              <span>45 Mins</span>
+              <span>Max Aerobic</span>
+              <span>Interval Circuit</span>
+            </div>
+          </div>
+        </div>
 
-    <p>📧 hello@peakfit.com</p>
+        <!-- Program 3 -->
+        <div class="program-card reveal" data-category="yoga">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Vinyasa & Functional Mobility">
+            <span class="program-tag">Mobility</span>
+          </div>
+          <div class="program-body">
+            <h3>Functional Flow & Mobility</h3>
+            <p>Targeted hip decompression, spinal mobility, and rotational strength led by Coach Dhiti.</p>
+            <div class="program-meta">
+              <span>55 Mins</span>
+              <span>Restorative</span>
+              <span>All Levels</span>
+            </div>
+          </div>
+        </div>
 
-    <p>📍 Chandigarh, India</p>
+        <!-- Program 4 -->
+        <div class="program-card reveal" data-category="combat">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=700&q=80" alt="Combat Striking">
+            <span class="program-tag">Combat</span>
+          </div>
+          <div class="program-body">
+            <h3>Striking & Footwork</h3>
+            <p>Boxing combinations, speed agility ladders, and rotational core conditioning for athletic power.</p>
+            <div class="program-meta">
+              <span>50 Mins</span>
+              <span>Intermediate</span>
+              <span>Heavy Bags</span>
+            </div>
+          </div>
+        </div>
 
-</section>
+        <!-- Program 5 -->
+        <div class="program-card reveal" data-category="strength">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=700&q=80" alt="Private Mentorship">
+            <span class="program-tag">1-on-1</span>
+          </div>
+          <div class="program-body">
+            <h3>Private Coaching with Dhiti</h3>
+            <p>Comprehensive posture and movement assessment, weekly biometric checks, and personalized daily guidance.</p>
+            <div class="program-meta">
+              <span>Custom Pace</span>
+              <span>Elite Mentorship</span>
+              <span>VIP Tier</span>
+            </div>
+          </div>
+        </div>
 
-<footer>
+        <!-- Program 6 -->
+        <div class="program-card reveal" data-category="yoga">
+          <div class="program-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Pilates Core Sculpt">
+            <span class="program-tag">Pilates</span>
+          </div>
+          <div class="program-body">
+            <h3>Pilates & Core Stability</h3>
+            <p>Low-impact isometric holds targeting deep transverse abdominals and pelvic alignment.</p>
+            <div class="program-meta">
+              <span>50 Mins</span>
+              <span>Core Focus</span>
+              <span>Mat & Bands</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    © 2026 PeakFit Gym
+  <!-- Health & BMI Calculator (Clean Dashboard) -->
+  <section id="calculator" class="calculator-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Biometric Assessment</div>
+        <h2 class="section-title">Health & Metabolic <span class="serif-italic">Baseline</span></h2>
+        <p class="section-subtitle">
+          Input your parameters to estimate your current Body Mass Index and daily caloric maintenance target.
+        </p>
+      </div>
 
-</footer>
+      <div class="calc-dashboard reveal">
+        <div class="calc-form">
+          <div class="unit-switcher">
+            <button class="unit-btn active" data-unit="metric">Metric (cm / kg)</button>
+            <button class="unit-btn" data-unit="imperial">Imperial (in / lbs)</button>
+          </div>
 
+          <div class="form-row">
+            <div class="form-field">
+              <label id="height-label" for="calc-height">Height (cm)</label>
+              <input type="number" id="calc-height" value="175" min="100" max="230">
+            </div>
+            <div class="form-field">
+              <label id="weight-label" for="calc-weight">Weight (kg)</label>
+              <input type="number" id="calc-weight" value="70" min="30" max="250">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="calc-age">Age (Years)</label>
+              <input type="number" id="calc-age" value="26" min="14" max="90">
+            </div>
+            <div class="form-field">
+              <label for="calc-gender">Gender</label>
+              <select id="calc-gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="calc-activity">Training Activity Frequency</label>
+            <select id="calc-activity">
+              <option value="1.2">Sedentary (Desk job, limited exercise)</option>
+              <option value="1.375" selected>Lightly Active (1-3 gym sessions/week)</option>
+              <option value="1.55">Moderately Active (3-5 intense sessions/week)</option>
+              <option value="1.725">Very Active (6-7 intense sessions/week)</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary open-modal-trigger" data-plan="Consult with Coach Dhiti">
+            Consult on Custom Macro Split
+          </button>
+        </div>
+
+        <div class="calc-output">
+          <div>
+            <span class="output-header">Estimated Metric Value</span>
+            <div class="bmi-large-number" id="bmi-value">22.9</div>
+            <div class="bmi-category-tag" id="bmi-status">Optimal Healthy Range</div>
+
+            <div class="gauge-track">
+              <div class="gauge-needle" id="bmi-pointer"></div>
+            </div>
+          </div>
+
+          <div class="caloric-breakdown" id="calorie-advice">
+            Calculating caloric baseline...
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Schedule Section -->
+  <section id="schedule">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Studio Schedule</div>
+        <h2 class="section-title">Weekly <span class="serif-italic">Timetable</span></h2>
+        <p class="section-subtitle">
+          Browse daily coached sessions across our strength, combat, and recovery studios.
+        </p>
+      </div>
+
+      <div class="day-selector reveal">
+        <button class="day-tab active" data-day="monday">Monday</button>
+        <button class="day-tab" data-day="tuesday">Tuesday</button>
+        <button class="day-tab" data-day="wednesday">Wednesday</button>
+        <button class="day-tab" data-day="thursday">Thursday</button>
+        <button class="day-tab" data-day="friday">Friday</button>
+        <button class="day-tab" data-day="saturday">Saturday</button>
+        <button class="day-tab" data-day="sunday">Sunday</button>
+      </div>
+
+      <div class="schedule-grid" id="schedule-grid-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaches Section -->
+  <section id="coaches">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Faculty & Mentors</div>
+        <h2 class="section-title">Led by <span class="serif-italic">Dhiti Sharma</span> & Coaches</h2>
+        <p class="section-subtitle">
+          Dedicated practitioners with rigorous credentials in exercise physiology and athletic conditioning.
+        </p>
+      </div>
+
+      <div class="coaches-grid">
+        <!-- Dhiti Sharma -->
+        <div class="coach-card spotlight reveal">
+          <div class="coach-img-box">
+            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Dhiti Sharma Head Coach">
+            <span class="coach-badge-tag">Founder & Head Coach</span>
+          </div>
+          <div class="coach-body">
+            <h3>Dhiti Sharma</h3>
+            <div class="coach-role">Biomechanical & Strength Specialist</div>
+            <p class="coach-bio">Specializing in metabolic conditioning, joint mobility, and sustainable body recomposition with over 7 years of high-performance coaching.</p>
+          </div>
+        </div>
+
+        <!-- Coach 2 -->
+        <div class="coach-card reveal">
+          <div class="coach-img-box">
+            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Alex Rivera Powerlifting">
+          </div>
+          <div class="coach-body">
+            <h3>Alex Rivera</h3>
+            <div class="coach-role">Barbell & Powerlifting Coach</div>
+            <p class="coach-bio">Former national competitive lifter focusing on deadlift/squat trajectory optimization and posterior chain development.</p>
+          </div>
+        </div>
+
+        <!-- Coach 3 -->
+        <div class="coach-card reveal">
+          <div class="coach-img-box">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova Mobility">
+          </div>
+          <div class="coach-body">
+            <h3>Elena Rostova</h3>
+            <div class="coach-role">Clinical Posture & Mobility</div>
+            <p class="coach-bio">Certified clinical posture mentor helping athletes restore thoracic rotation, core stability, and hip mechanics.</p>
+          </div>
+        </div>
+
+        <!-- Coach 4 -->
+        <div class="coach-card reveal">
+          <div class="coach-img-box">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance Boxing">
+          </div>
+          <div class="coach-body">
+            <h3>Marcus Vance</h3>
+            <div class="coach-role">HIIT & Combat Conditioning</div>
+            <p class="coach-bio">Golden Gloves boxer with an intensive conditioning curriculum designed to elevate anaerobic endurance and speed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Membership Tiers</div>
+        <h2 class="section-title">Invest in Your <span class="serif-italic">Longevity</span></h2>
+        <p class="section-subtitle">
+          Transparent studio access tiers with zero lock-in contracts or initiation surcharges.
+        </p>
+      </div>
+
+      <div class="billing-switch-wrap reveal">
+        <span class="billing-label">Monthly Billing</span>
+        <label class="switch-control">
+          <input type="checkbox" id="billing-toggle">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="billing-label">
+          Annual Billing <span class="discount-pill">Save 25%</span>
+        </span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="tier-card reveal">
+          <div class="tier-name">Studio Access</div>
+          <div class="tier-desc">Ideal for independent lifters seeking world-class equipment.</div>
+          
+          <div class="tier-price-row">
+            <span class="tier-currency">₹</span>
+            <span class="tier-amount" id="price-basic">999</span>
+            <span class="tier-period price-period">/ month</span>
+          </div>
+
+          <ul class="tier-features">
+            <li class="included"><span class="check-icon">—</span> Full Studio Floor & Calibrated Barbell Zone</li>
+            <li class="included"><span class="check-icon">—</span> Locker & Shower Facilities</li>
+            <li class="included"><span class="check-icon">—</span> Biometric Baseline Assessment</li>
+            <li><span class="cross-icon">—</span> Group Studio Classes</li>
+            <li><span class="cross-icon">—</span> 1-on-1 Personal Mentorship</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block open-modal-trigger" data-plan="Enroll in Studio Access">
+            Select Studio Pass
+          </button>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="tier-card featured reveal">
+          <div class="tier-tag">Recommended</div>
+          <div class="tier-name">Performance Tier</div>
+          <div class="tier-desc">Unlimited group disciplines and recovery suite access.</div>
+          
+          <div class="tier-price-row">
+            <span class="tier-currency">₹</span>
+            <span class="tier-amount" id="price-pro">1999</span>
+            <span class="tier-period price-period">/ month</span>
+          </div>
+
+          <ul class="tier-features">
+            <li class="included"><span class="check-icon">—</span> <strong>Everything in Studio Access</strong></li>
+            <li class="included"><span class="check-icon">—</span> Unlimited Group Classes (HIIT, Yoga, Boxing)</li>
+            <li class="included"><span class="check-icon">—</span> Infrared Sauna & Contrast Bath Access</li>
+            <li class="included"><span class="check-icon">—</span> Monthly Body Composition Scan</li>
+            <li><span class="cross-icon">—</span> Dedicated 1-on-1 Master Coach</li>
+          </ul>
+
+          <button class="btn btn-primary btn-block open-modal-trigger" data-plan="Enroll in Performance Tier">
+            Join Performance Tier
+          </button>
+        </div>
+
+        <!-- Elite Plan -->
+        <div class="tier-card reveal">
+          <div class="tier-name">VIP Mentorship</div>
+          <div class="tier-desc">Full 1-on-1 individualized coaching with Dhiti Sharma.</div>
+          
+          <div class="tier-price-row">
+            <span class="tier-currency">₹</span>
+            <span class="tier-amount" id="price-elite">2999</span>
+            <span class="tier-period price-period">/ month</span>
+          </div>
+
+          <ul class="tier-features">
+            <li class="included"><span class="check-icon">—</span> <strong>Everything in Performance Tier</strong></li>
+            <li class="included"><span class="check-icon">—</span> 12x Dedicated 1-on-1 Coached Sessions</li>
+            <li class="included"><span class="check-icon">—</span> Tailored Macro & Micronutrient Strategy</li>
+            <li class="included"><span class="check-icon">—</span> Reserved Studio Parking & Towel Service</li>
+            <li class="included"><span class="check-icon">—</span> 24/7 Trainer Communication Channel</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block open-modal-trigger" data-plan="Enroll in VIP Mentorship">
+            Join VIP Mentorship
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformations & Stories Section -->
+  <section id="stories">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Documented Results</div>
+        <h2 class="section-title">Client <span class="serif-italic">Case Studies</span></h2>
+        <p class="section-subtitle">
+          Real athletes, executives, and professionals who redefined their performance with PeakFit.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              Working with Coach Dhiti completely transformed how I approach movement and nutrition. I shed 12kg of fat while gaining measurable strength on my compound lifts. The discipline here is infectious.
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <div class="author-meta">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Dhanya Patel">
+              <div>
+                <h5>Dhanya Patel</h5>
+                <span>Member since 2024</span>
+              </div>
+            </div>
+            <span class="author-stat-tag">-12kg Recomp</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              The equipment selection is Olympic standard. Alex and Dhiti corrected my hip hinge technique on day one. If you are serious about functional power, this is the only studio in Chandigarh to consider.
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <div class="author-meta">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Rohan Verma">
+              <div>
+                <h5>Rohan Verma</h5>
+                <span>Power Athlete</span>
+              </div>
+            </div>
+            <span class="author-stat-tag">+6kg Muscle</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              Between the high-tempo boxing circuits and mobility flows, my resting heart rate dropped from 74 to 58 bpm within four months. The community and coaching standards are exceptional.
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <div class="author-meta">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Simran Kaur">
+              <div>
+                <h5>Simran Kaur</h5>
+                <span>HIIT Regular</span>
+              </div>
+            </div>
+            <span class="author-stat-tag">VO2 Peak</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="eyebrow">Clarity & Guidance</div>
+        <h2 class="section-title">Frequently Asked <span class="serif-italic">Questions</span></h2>
+        <p class="section-subtitle">
+          Everything you need to know about trial passes, studio etiquette, and coaching plans.
+        </p>
+      </div>
+
+      <div class="faq-container reveal">
+        <div class="faq-item active">
+          <button class="faq-question-btn">
+            <span>What does the 3-Day Guest Pass include?</span>
+            <span class="faq-indicator">+</span>
+          </button>
+          <div class="faq-body">
+            The pass includes unrestricted access to the studio floor, open cardio zone, all group fitness classes, locker facilities, and a complimentary 15-minute movement screen with Coach Dhiti.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>I have never lifted weights before. Can I join?</span>
+            <span class="faq-indicator">+</span>
+          </button>
+          <div class="faq-body">
+            Yes. Over a third of our members started as novices. Our coaching staff walks every beginner through fundamental barbell mechanics, safety protocols, and personalized scaling.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>Can I pause my membership during business travel?</span>
+            <span class="faq-indicator">+</span>
+          </button>
+          <div class="faq-body">
+            Yes. Performance and VIP members can freeze their membership for up to 30 cumulative days per year with zero holding fees.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>What are the studio hours in Chandigarh?</span>
+            <span class="faq-indicator">+</span>
+          </button>
+          <div class="faq-body">
+            Monday through Saturday: 5:00 AM – 11:00 PM. Sunday: 7:00 AM – 8:00 PM (Recovery Suite & Open Practice). VIP keyholders have 24/7 access.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Location & Contact -->
+  <section id="contact">
+    <div class="container contact-layout">
+      <div class="studio-details-box reveal">
+        <div class="eyebrow">Studio Hub</div>
+        <h3>Visit PeakFit Chandigarh</h3>
+        <p class="desc">
+          Stop by our studio in Sector 26 for an in-person facility consultation, biomechanics screen, or espresso at the athlete lounge.
+        </p>
+
+        <div class="contact-rows">
+          <div class="contact-row-item">
+            <div class="contact-icon-frame">📍</div>
+            <div class="contact-meta">
+              <h6>Studio Location</h6>
+              <p>Plot 48, Sector 26 Hub, Chandigarh, 160019, India</p>
+            </div>
+          </div>
+
+          <div class="contact-row-item">
+            <div class="contact-icon-frame">📞</div>
+            <div class="contact-meta">
+              <h6>Direct Inquiry</h6>
+              <p><a href="tel:+919876543210">+91 98765 43210</a> (Coach Dhiti Direct)</p>
+            </div>
+          </div>
+
+          <div class="contact-row-item">
+            <div class="contact-icon-frame">✉️</div>
+            <div class="contact-meta">
+              <h6>Email Channel</h6>
+              <p><a href="mailto:dhiti@peakfit.com">dhiti@peakfit.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hours-panel">
+          <strong>Operating Schedule</strong>
+          Mon – Sat: 05:00 – 23:00 • Sun: 07:00 – 20:00
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal">
+        <div class="eyebrow">Inquiry</div>
+        <h3>Book a Consultation</h3>
+        <p>Direct message to Coach Dhiti Sharma for custom plans and studio guest passes.</p>
+
+        <form id="contact-form-main" class="inquiry-form">
+          <div class="form-field">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" placeholder="e.g. Dhanya Sharma" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" placeholder="+91 98765 00000" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-goal">Focus Area</label>
+              <select id="contact-goal">
+                <option value="Fat Loss">Body Recomposition</option>
+                <option value="Hypertrophy">Athletic Hypertrophy</option>
+                <option value="Mobility">Mobility & Posture</option>
+                <option value="1-on-1">Private 1-on-1 Mentorship</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Training Background / Note</label>
+            <textarea id="contact-message" placeholder="Briefly describe your goals or when you'd like to tour the studio..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Send Message to Coach Dhiti
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <div class="logo-symbol">P</div>
+            Peak<span>Fit</span>
+          </a>
+          <p>
+            Chandigarh's premier boutique strength and human performance studio. Coached with precision by Dhiti Sharma since 2019.
+          </p>
+          <div class="footer-social-links">
+            <a href="#hero" class="social-link" title="Instagram">IG</a>
+            <a href="#hero" class="social-link" title="LinkedIn">IN</a>
+            <a href="#hero" class="social-link" title="YouTube">YT</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#about">The Ethos</a></li>
+            <li><a href="#programs">Disciplines</a></li>
+            <li><a href="#calculator">Health Metric</a></li>
+            <li><a href="#schedule">Studio Timetable</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="#programs">Athletic Hypertrophy</a></li>
+            <li><a href="#programs">Metabolic Conditioning</a></li>
+            <li><a href="#programs">Mobility & Yoga</a></li>
+            <li><a href="#programs">Combat Striking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Studio</h5>
+          <ul>
+            <li><a href="#contact">Sector 26 Hub</a></li>
+            <li><a href="#pricing">Membership Rates</a></li>
+            <li><a href="#stories">Documented Results</a></li>
+            <li><a href="#faq">FAQ & Etiquette</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 PeakFit Studio. Designed with care for <strong>Dhiti</strong>.</p>
+        <p>Performance • Biomechanics • Longevity</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- VIP Booking Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <div class="eyebrow" style="margin-bottom:8px;">Studio Guest Pass</div>
+        <h3 id="modal-title-text">Claim 3-Day VIP Pass</h3>
+        <p>Experience PeakFit Chandigarh with zero commitments. Our head coach will confirm your pass instantly.</p>
+      </div>
+
+      <form id="modal-booking-form">
+        <div class="form-field" style="margin-bottom: 14px;">
+          <label for="modal-name">Full Name</label>
+          <input type="text" id="modal-name" placeholder="e.g. Dhanya Sharma" required>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 14px;">
+          <label for="modal-phone">Phone Number</label>
+          <input type="tel" id="modal-phone" placeholder="+91 98765 00000" required>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 22px;">
+          <label for="modal-slot">Preferred Time Window</label>
+          <select id="modal-slot">
+            <option value="Morning (06:30 – 09:00)">Morning (06:30 – 09:00)</option>
+            <option value="Afternoon (12:00 – 15:00)">Afternoon (12:00 – 15:00)</option>
+            <option value="Evening (17:30 – 20:30)">Evening (17:30 – 20:30)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Confirm Pass Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
 </body>
 </html>
